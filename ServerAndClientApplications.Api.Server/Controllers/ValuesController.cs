@@ -7,16 +7,16 @@ namespace ServerAndClientApplications.Api.Server.Controllers;
 public class ValuesController : ControllerBase
 {
     [HttpGet]
-    public IActionResult GetAll()
+    public string[] Get()
     {
-        var output = new Person
+        return new string[]
         {
-            Id = 1,
-            FirstName = "John",
-            LastName = "Doe"
+            "Mango",
+            "Banana",
+            "Pear",
+            "Apple",
+            "Grapes"
         };
-        
-        return Ok(output);
     }
 }
 

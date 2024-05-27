@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Api.Server", "ServerAndClientApplications.Api.Server\ServerAndClientApplications.Api.Server.csproj", "{1612CD6B-4E15-43F9-871C-A008C015AA32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Console.Client", "ServerAndClientApplications.Console.Client\ServerAndClientApplications.Console.Client.csproj", "{605C37D3-EB71-4352-9BB7-E7882364F632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1612CD6B-4E15-43F9-871C-A008C015AA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1612CD6B-4E15-43F9-871C-A008C015AA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1612CD6B-4E15-43F9-871C-A008C015AA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605C37D3-EB71-4352-9BB7-E7882364F632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605C37D3-EB71-4352-9BB7-E7882364F632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605C37D3-EB71-4352-9BB7-E7882364F632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605C37D3-EB71-4352-9BB7-E7882364F632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
