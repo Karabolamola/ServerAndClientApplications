@@ -28,13 +28,3 @@ public class ApplicationConnectionsStrings
         return $"Server={_dsm.ServerName},{_dsm.Port.ToString()};Database={_dsm.DatabaseName};User={_dsm.UserName};Password={_dsm.Password};TrustServerCertificate={_dsm.IsTrustServerCertificate};";
     }
 }
-
-public class DatabaseSettingsModel
-{
-    public string ServerName { get; set; }
-    public int Port { get; set; }
-    public string DatabaseName { get; set; }
-    public string UserName { get; set; }
-    public string Password { get; set; }
-    public bool IsTrustServerCertificate { get; set; }
-}
