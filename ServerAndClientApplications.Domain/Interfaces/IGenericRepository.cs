@@ -5,7 +5,7 @@ namespace ServerAndClientApplications.Domain.Interfaces;
 // The constraint T is going to be a class
 public interface IGenericRepository<T> where T : class
 {
-    Task<List<T>> GetAllAsync();
+    Task<IEnumerable<T>> GetAllAsync();
     Task<T?> GetByIdAsync(int id);
     Task InsertAsync(T model);
     Task UpdateAsync(T model);
