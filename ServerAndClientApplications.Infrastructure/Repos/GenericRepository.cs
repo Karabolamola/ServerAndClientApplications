@@ -33,29 +33,42 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     // This method will return all the Records from the table
     public async Task<IEnumerable<T>> GetAllAsync()
     {
-        return await _context.Set<T>().ToListAsync();
+        return await _table.ToListAsync();
     }
 
+    // This method will return the specified record from the table based on the ID which it received as an argument
     public async Task<T?> GetByIdAsync(int id)
     {
-        return await _context.Set<T>().FindAsync(id);
+        return await _table.FindAsync(id);
     }
 
+    // This method will Insert one object into the table, it will receive the object as an argument which needs to be inserted into the database
     public async Task InsertAsync(T model)
     {
-        await _context.Set<T>().AddAsync(model);
+        // It will mark the Entity state as Added State
+        await _table.AddAsync(model);
     }
 
+    // This method is going to update the record in the table, it will receive the object as an argument
     public Task UpdateAsync(T model)
     {
-        _context.Set<T>().Update(model);
+        // First attach the object to the table
+        _table.Attach(model);
+        // Then set the state of the Entity as Modified
+        _context.Entry(model).State = EntityState.Modified;
         return Task.CompletedTask;
     }
 
-    public Task DeleteAsync(T model)
+    // This method is going to remove the record from the table, it will receive the primary key value as an argument whose information needs to be removed from the table
+    public async Task DeleteAsync(int id)
     {
-        _context.Set<T>().Remove(model);
-        return Task.CompletedTask;
+        // First, fetch the record from the table
+        T? model = await _table.FindAsync(id);
+        // This will mark the Entity State as Deleted
+        if (model != null)
+        {
+            _table.Remove(model);
+        }
     }
 
     public async Task SaveAsync()

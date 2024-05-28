@@ -9,6 +9,6 @@ public interface IGenericRepository<T> where T : class
     Task<T?> GetByIdAsync(int id);
     Task InsertAsync(T model);
     Task UpdateAsync(T model);
-    Task DeleteAsync(T model);
+    Task DeleteAsync(int id);
     Task SaveAsync();
 }
