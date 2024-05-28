@@ -7,10 +7,18 @@ namespace ServerAndClientApplications.Infrastructure.Repos;
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
     private readonly ApplicationDbContext _context;
+    private readonly DbSet<T> _table;
 
+    public GenericRepository()
+    {
+        _context = new ApplicationDbContext();
+        _table = _context.Set<T>();
+    }
+    
     public GenericRepository(ApplicationDbContext context)
     {
         _context = context;
+        _table = _context.Set<T>();
     }
 
     public async Task<List<T>> GetAllAsync()

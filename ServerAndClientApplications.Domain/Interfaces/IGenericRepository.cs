@@ -1,6 +1,9 @@
 namespace ServerAndClientApplications.Domain.Interfaces;
 
-public interface IGenericRepository<T>
+// Here we are creating the IGenericRepository interface as a Generic interface
+// Here we are applying the Generic constraint, the constraint is T
+// The constraint T is going to be a class
+public interface IGenericRepository<T> where T : class
 {
     Task<List<T>> GetAllAsync();
     Task<T?> GetByIdAsync(int id);
