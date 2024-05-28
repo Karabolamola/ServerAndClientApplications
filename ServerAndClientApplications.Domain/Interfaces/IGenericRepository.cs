@@ -1,4 +1,4 @@
-namespace ServerAndClientApplications.Repository.Interfaces;
+namespace ServerAndClientApplications.Domain.Interfaces;
 
 public interface IGenericRepository<T>
 {

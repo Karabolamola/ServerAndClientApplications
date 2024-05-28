@@ -4,7 +4,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.UI.Client", "ServerAndClientApplications.UI.Client\ServerAndClientApplications.UI.Client.csproj", "{605C37D3-EB71-4352-9BB7-E7882364F632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Repository", "ServerAndClientApplications.Repository\ServerAndClientApplications.Repository.csproj", "{3FDFE6ED-FBE2-4533-8BC6-39A7AFC4FBD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Infrastructure", "ServerAndClientApplications.Infrastructure\ServerAndClientApplications.Infrastructure.csproj", "{3FDFE6ED-FBE2-4533-8BC6-39A7AFC4FBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Domain", "ServerAndClientApplications.Domain\ServerAndClientApplications.Domain.csproj", "{094B4E4F-EE32-45DB-8045-81BE9F506080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerAndClientApplications.Data", "ServerAndClientApplications.Data\ServerAndClientApplications.Data.csproj", "{C02223A4-3E24-49A5-B954-35CDA252E709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +28,13 @@ Global
 		{3FDFE6ED-FBE2-4533-8BC6-39A7AFC4FBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FDFE6ED-FBE2-4533-8BC6-39A7AFC4FBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FDFE6ED-FBE2-4533-8BC6-39A7AFC4FBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094B4E4F-EE32-45DB-8045-81BE9F506080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094B4E4F-EE32-45DB-8045-81BE9F506080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094B4E4F-EE32-45DB-8045-81BE9F506080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094B4E4F-EE32-45DB-8045-81BE9F506080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C02223A4-3E24-49A5-B954-35CDA252E709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02223A4-3E24-49A5-B954-35CDA252E709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02223A4-3E24-49A5-B954-35CDA252E709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02223A4-3E24-49A5-B954-35CDA252E709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

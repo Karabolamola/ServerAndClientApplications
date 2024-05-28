@@ -1,6 +1,6 @@
-using ServerAndClientApplications.Repository.Interfaces;
+using ServerAndClientApplications.Domain.Interfaces;
 
-namespace ServerAndClientApplications.Repository.Repos;
+namespace ServerAndClientApplications.Infrastructure.Repos;
 
 public class GenericRepository<T> : IGenericRepository<T>
 {
