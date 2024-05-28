@@ -2,7 +2,7 @@ namespace ServerAndClientApplications.Data;
 
 public class ApplicationConnectionsStrings
 {
-    private static DatabaseSettingsModel _dsm;
+    private static DatabaseSettingsModel _dsm = null!;
 
     public ApplicationConnectionsStrings()
     {
