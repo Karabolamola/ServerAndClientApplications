@@ -4,10 +4,8 @@ using ServerAndClientApplications.Domain.Interfaces;
 
 namespace ServerAndClientApplications.Infrastructure.Repos;
 
-// The following GenericRepository class Implement the IGenericRepository Interface
-// And Here T is going to be a class
-// While Creating an Instance of the GenericRepository type, we need to specify the Class Name
-// That is we need to specify the actual class name of the type T
+// The following GenericRepository class Implement the IGenericRepository Interface and Here T is going to be a class
+// While Creating an Instance of the GenericRepository type, we need to specify the Class Name that is we need to specify the actual class name of the type T
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
     // The following variable is going to hold the DBContext instance
@@ -71,6 +69,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         }
     }
 
+    // This method will make the changes permanent in the database, that means once we call Insert, Update, and Delete Methods, then we need to call the Save method to make the changes permanent in the database
     public async Task SaveAsync()
     {
         await _context.SaveChangesAsync();
