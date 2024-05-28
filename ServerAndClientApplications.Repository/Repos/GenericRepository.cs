@@ -2,40 +2,35 @@ using ServerAndClientApplications.Repository.Interfaces;
 
 namespace ServerAndClientApplications.Repository.Repos;
 
-public class GenericRepository<T> : IGenericRepository
+public class GenericRepository<T> : IGenericRepository<T>
 {
-    private readonly GenericApplicationDbContext<T> _context = new GenericApplicationDbContext<T>();
-    public async Task<List<T>> GetAllAsync()
+    public Task<List<T>> GetAllAsync()
     {
-        return await _context.DbSets.ToListAsync();
-        // return await _context.Set<T>().ToListAsync();
+        throw new NotImplementedException();
     }
 
-    public async Task<T?> GetByIdAsync(int id)
+    public Task<T?> GetByIdAsync(int id)
     {
-        return await _context.DbSets.SingleAsync(x => x.Id == id);
-        // return await _context.Set<T>().FindAsync(id);
+        throw new NotImplementedException();
     }
 
-    public async Task InsertAsync(T model)
+    public Task InsertAsync(T model)
     {
-        await _context.DbSets.AddAsync(model);
+        throw new NotImplementedException();
     }
 
     public Task UpdateAsync(T model)
     {
-        _context.DbSets.Update(model);
-        return Task.CompletedTask;
+        throw new NotImplementedException();
     }
 
     public Task DeleteAsync(T model)
     {
-        _context.DbSets.Remove(model);
-        return Task.CompletedTask;
+        throw new NotImplementedException();
     }
 
-    public async Task SaveAsync()
+    public Task SaveAsync()
     {
-        await _context.SaveChangesAsync();
+        throw new NotImplementedException();
     }
 }
